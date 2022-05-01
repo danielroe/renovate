@@ -1,0 +1,42 @@
+{
+  "default": {
+    "description": "Useful renovate config rules",
+    "extends": [
+      "config:base",
+      "group:allNonMajor",
+      ":labels(dependencies, chore)",
+      ":automergeLinters",
+      ":automergeTesters",
+      ":automergeTypes",
+      ":automergeMinor",
+      ":maintainLockFilesWeekly",
+      ":schedule:earlyMondays",
+      ":widenPeerDependencies",
+      ":semanticCommitTypeAll(chore)"
+    ],
+    "meteor": {
+      "enabled": false
+    },
+    "rangeStrategy": "bump",
+    "npm": {
+      "commitMessageTopic": "{{prettyDepType}} {{depName}}"
+    },
+    "packageRules": [
+      {
+        "extends": "packages:test",
+        "matchPackageNames": ["c8", "happy-dom", "jsdom", "vitest"],
+        "groupName": "test packages"
+      },
+      {
+        "matchPackagePatterns": ["release-it"],
+        "automerge": true,
+        "groupName": "release-it"
+      },
+      {
+        "extends": "packages:linters",
+        "matchPackagePatterns": ["commitlint"],
+        "groupName": "linters"
+      }
+    ]
+  }
+}
