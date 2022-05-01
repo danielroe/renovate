@@ -10,7 +10,6 @@
       ":automergeTypes",
       ":automergeMinor",
       ":maintainLockFilesWeekly",
-      ":schedule:weekly",
       ":widenPeerDependencies",
       ":semanticCommitTypeAll(chore)"
     ],
