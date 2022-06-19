@@ -16,5 +16,5 @@
   "devDependencies": {
     "renovate": "latest"
   },
-  "packageManager": "pnpm@7.0.1"
+  "packageManager": "pnpm@7.3.0"
 }
