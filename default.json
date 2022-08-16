@@ -24,6 +24,7 @@
       {
         "extends": "packages:test",
         "matchPackageNames": ["c8", "happy-dom", "jsdom", "vitest"],
+        "automerge": true,
         "groupName": "test packages"
       },
       {
@@ -33,8 +34,15 @@
       },
       {
         "extends": "packages:linters",
+        "automerge": true,
         "matchPackagePatterns": ["commitlint"],
-        "groupName": "linters"
+        "groupName": "all linters"
+      },
+      {
+        "groupName": "nuxt core",
+        "groupSlug": "nuxt",
+        "matchPackageNames": ["nuxt", "nuxt3"],
+        "matchPackagePatterns": ["^@nuxt/"]
       }
     ]
   }
