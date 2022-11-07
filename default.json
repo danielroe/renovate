@@ -2,7 +2,7 @@
   "default": {
     "description": "Useful renovate config rules",
     "extends": [
-      "config:base",
+      "config:js-lib",
       ":labels(dependencies, chore)",
       ":automergeMinor",
       ":maintainLockFilesWeekly",
