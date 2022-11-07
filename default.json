@@ -9,6 +9,8 @@
       ":widenPeerDependencies",
       ":semanticCommitTypeAll(chore)"
     ],
+    "rebaseStalePrs": true,
+    "prCreation": "not-pending",
     "meteor": {
       "enabled": false
     },
