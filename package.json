@@ -9,7 +9,7 @@
     "url": "git+https://github.com/danielroe/renovate.git"
   },
   "scripts": {
-    "validate": "npx renovate-config-validator",
+    "validate": "pnpm exec renovate-config-validator",
     "test": "npm run validate",
     "prepare": "npm run test"
   },
