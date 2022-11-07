@@ -3,11 +3,7 @@
     "description": "Useful renovate config rules",
     "extends": [
       "config:base",
-      "group:allNonMajor",
       ":labels(dependencies, chore)",
-      ":automergeLinters",
-      ":automergeTesters",
-      ":automergeTypes",
       ":automergeMinor",
       ":maintainLockFilesWeekly",
       ":widenPeerDependencies",
@@ -22,27 +18,66 @@
     },
     "packageRules": [
       {
-        "extends": "packages:test",
-        "matchPackageNames": ["c8", "happy-dom", "jsdom", "vitest"],
+        "matchDepTypes": [
+          "devDependencies"
+        ],
+        "automerge": true
+      },
+      {
+        "groupName": "vite dependencies",
+        "groupSlug": "vite",
+        "matchPackageNames": [
+          "vite"
+        ],
+        "matchPackagePatterns": [
+          "^@vitejs/",
+          "^vite-"
+        ],
+        "automerge": true
+      },
+      {
+        "extends": [
+          "packages:test"
+        ],
+        "matchPackageNames": [
+          "c8",
+          "happy-dom",
+          "jsdom",
+          "vitest"
+        ],
+        "matchPackagePatterns": [
+          "^@vitest/"
+        ],
         "automerge": true,
         "groupName": "test packages"
       },
       {
-        "matchPackagePatterns": ["release-it"],
+        "matchPackagePatterns": [
+          "release-it"
+        ],
         "automerge": true,
         "groupName": "release-it"
       },
       {
-        "extends": "packages:linters",
+        "extends": [
+          "packages:linters"
+        ],
         "automerge": true,
-        "matchPackagePatterns": ["commitlint"],
+        "matchPackageNames": [
+          "commitlint"
+        ],
         "groupName": "all linters"
       },
       {
         "groupName": "nuxt core",
         "groupSlug": "nuxt",
-        "matchPackageNames": ["nuxt", "nuxt3"],
-        "matchPackagePatterns": ["^@nuxt/"]
+        "matchPackageNames": [
+          "nuxt",
+          "nuxt3"
+        ],
+        "matchPackagePatterns": [
+          "^@nuxt/"
+        ]
       }
     ]
   }
