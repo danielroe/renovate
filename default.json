@@ -1,86 +1,84 @@
 {
-  "default": {
-    "description": "Useful renovate config rules",
-    "extends": [
-      "config:js-lib",
-      ":labels(dependencies, chore)",
-      ":automergeMinor",
-      ":maintainLockFilesWeekly",
-      ":widenPeerDependencies",
-      ":semanticCommitTypeAll(chore)"
-    ],
-    "rebaseStalePrs": true,
-    "prCreation": "not-pending",
-    "meteor": {
-      "enabled": false
+  "description": "Useful renovate config rules",
+  "extends": [
+    "config:js-lib",
+    ":labels(dependencies, chore)",
+    ":automergeMinor",
+    ":maintainLockFilesWeekly",
+    ":widenPeerDependencies",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "rebaseStalePrs": true,
+  "prCreation": "not-pending",
+  "meteor": {
+    "enabled": false
+  },
+  "rangeStrategy": "bump",
+  "npm": {
+    "commitMessageTopic": "{{prettyDepType}} {{depName}}"
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true
     },
-    "rangeStrategy": "bump",
-    "npm": {
-      "commitMessageTopic": "{{prettyDepType}} {{depName}}"
+    {
+      "groupName": "vite dependencies",
+      "groupSlug": "vite",
+      "matchPackageNames": [
+        "vite"
+      ],
+      "matchPackagePatterns": [
+        "^@vitejs/",
+        "^vite-"
+      ],
+      "automerge": true
     },
-    "packageRules": [
-      {
-        "matchDepTypes": [
-          "devDependencies"
-        ],
-        "automerge": true
-      },
-      {
-        "groupName": "vite dependencies",
-        "groupSlug": "vite",
-        "matchPackageNames": [
-          "vite"
-        ],
-        "matchPackagePatterns": [
-          "^@vitejs/",
-          "^vite-"
-        ],
-        "automerge": true
-      },
-      {
-        "extends": [
-          "packages:test"
-        ],
-        "matchPackageNames": [
-          "c8",
-          "happy-dom",
-          "jsdom",
-          "vitest"
-        ],
-        "matchPackagePatterns": [
-          "^@vitest/"
-        ],
-        "automerge": true,
-        "groupName": "test packages"
-      },
-      {
-        "matchPackagePatterns": [
-          "release-it"
-        ],
-        "automerge": true,
-        "groupName": "release-it"
-      },
-      {
-        "extends": [
-          "packages:linters"
-        ],
-        "automerge": true,
-        "matchPackageNames": [
-          "commitlint"
-        ],
-        "groupName": "all linters"
-      },
-      {
-        "groupName": "nuxt core",
-        "groupSlug": "nuxt",
-        "matchPackageNames": [
-          "nuxt",
-          "nuxt3"
-        ],
-        "matchPackagePatterns": [
-          "^@nuxt/"
-        ]
-      }
-    ]
-  }
+    {
+      "extends": [
+        "packages:test"
+      ],
+      "matchPackageNames": [
+        "c8",
+        "happy-dom",
+        "jsdom",
+        "vitest"
+      ],
+      "matchPackagePatterns": [
+        "^@vitest/"
+      ],
+      "automerge": true,
+      "groupName": "test packages"
+    },
+    {
+      "matchPackagePatterns": [
+        "release-it"
+      ],
+      "automerge": true,
+      "groupName": "release-it"
+    },
+    {
+      "extends": [
+        "packages:linters"
+      ],
+      "automerge": true,
+      "matchPackageNames": [
+        "commitlint"
+      ],
+      "groupName": "all linters"
+    },
+    {
+      "groupName": "nuxt core",
+      "groupSlug": "nuxt",
+      "matchPackageNames": [
+        "nuxt",
+        "nuxt3"
+      ],
+      "matchPackagePatterns": [
+        "^@nuxt/"
+      ]
+    }
+  ]
 }
