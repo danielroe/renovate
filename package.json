@@ -1,13 +1,9 @@
 {
   "name": "renovate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Preset for Renovate",
   "license": "MIT",
   "homepage": "https://github.com/danielroe/renovate",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danielroe/renovate.git"
-  },
   "scripts": {
     "validate": "pnpm exec renovate-config-validator",
     "test": "npm run validate",
