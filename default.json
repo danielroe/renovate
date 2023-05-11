@@ -3,6 +3,7 @@
   "extends": [
     "config:js-lib",
     ":labels(dependencies, chore)",
+    ":automergeBranch",
     ":automergeMinor",
     ":maintainLockFilesWeekly",
     ":widenPeerDependencies",
