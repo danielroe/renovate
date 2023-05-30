@@ -62,6 +62,22 @@
       "groupName": "all linters"
     },
     {
+      "groupName": "nuxt dependencies",
+      "groupSlug": "nuxt-deps",
+      "rangeStrategy": "replace",
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchPackageNames": [
+        "nuxt",
+        "@nuxt/schema",
+        "@nuxt/kit",
+        "@nuxt/vite-builder",
+        "@nuxt/webpack-builder",
+        "@nuxt/test-utils"
+      ]
+    },
+    {
       "groupName": "nuxt core",
       "groupSlug": "nuxt",
       "matchPackageNames": [
