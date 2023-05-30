@@ -20,12 +20,6 @@
   },
   "packageRules": [
     {
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "automerge": true
-    },
-    {
       "groupName": "vite dependencies",
       "groupSlug": "vite",
       "matchPackageNames": [
@@ -34,8 +28,7 @@
       "matchPackagePatterns": [
         "^@vitejs/",
         "^vite-"
-      ],
-      "automerge": true
+      ]
     },
     {
       "extends": [
@@ -50,21 +43,18 @@
       "matchPackagePatterns": [
         "^@vitest/"
       ],
-      "automerge": true,
       "groupName": "test packages"
     },
     {
       "matchPackagePatterns": [
         "release-it"
       ],
-      "automerge": true,
       "groupName": "release-it"
     },
     {
       "extends": [
         "packages:linters"
       ],
-      "automerge": true,
       "matchPackageNames": [
         "commitlint"
       ],
