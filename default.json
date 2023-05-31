@@ -2,12 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Useful renovate config rules",
   "extends": [
-    "config:js-lib",
+    "config:base",
     ":labels(dependencies, chore)",
     ":automergeBranch",
     ":automergeMinor",
     ":maintainLockFilesWeekly",
     ":widenPeerDependencies",
+    ":pinDevDependencies",
     ":semanticCommitTypeAll(chore)"
   ],
   "rebaseStalePrs": true,
@@ -15,11 +16,16 @@
   "meteor": {
     "enabled": false
   },
-  "rangeStrategy": "bump",
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
   },
   "packageRules": [
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "rangeStrategy": "update-lockfile"
+    },
     {
       "groupName": "vite dependencies",
       "groupSlug": "vite",
@@ -60,22 +66,6 @@
         "commitlint"
       ],
       "groupName": "all linters"
-    },
-    {
-      "groupName": "nuxt dependencies",
-      "groupSlug": "nuxt-deps",
-      "rangeStrategy": "replace",
-      "matchDepTypes": [
-        "dependencies"
-      ],
-      "matchPackageNames": [
-        "nuxt",
-        "@nuxt/schema",
-        "@nuxt/kit",
-        "@nuxt/vite-builder",
-        "@nuxt/webpack-builder",
-        "@nuxt/test-utils"
-      ]
     },
     {
       "groupName": "nuxt core",
