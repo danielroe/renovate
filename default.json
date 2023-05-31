@@ -70,6 +70,7 @@
       "groupName": "nuxt core",
       "groupSlug": "nuxt",
       "matchPackageNames": [
+        "vue",
         "nuxt",
         "nuxi",
         "nuxt3",
