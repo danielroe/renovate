@@ -67,6 +67,15 @@
       "groupName": "all linters"
     },
     {
+      "matchPackageNames": [
+        "histoire"
+      ],
+      "matchPackagePatterns": [
+        "^@histoire/"
+      ],
+      "groupName": "histoire"
+    },
+    {
       "groupName": "nuxt core",
       "groupSlug": "nuxt",
       "matchPackageNames": [
