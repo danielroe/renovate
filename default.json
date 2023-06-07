@@ -93,6 +93,7 @@
         "@nuxt/generator",
         "@nuxt/kit-edge",
         "@nuxt/kit",
+        "@nuxt/module-builder",
         "@nuxt/schema-edge",
         "@nuxt/schema",
         "@nuxt/server-edge",
