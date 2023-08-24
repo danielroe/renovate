@@ -7,7 +7,7 @@
     ":automergeBranch",
     ":automergeMinor",
     ":maintainLockFilesWeekly",
-    ":automergeEarlyMondays",
+    "schedule:automergeEarlyMondays",
     ":widenPeerDependencies",
     ":pinDevDependencies",
     ":semanticCommitTypeAll(chore)"
