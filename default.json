@@ -10,7 +10,8 @@
     "schedule:automergeEarlyMondays",
     ":widenPeerDependencies",
     ":pinDevDependencies",
-    ":semanticCommitTypeAll(chore)"
+    ":semanticCommitTypeAll(chore)",
+    "group:allNonMajor"
   ],
   "prCreation": "not-pending",
   "meteor": {
