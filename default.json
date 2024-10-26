@@ -13,7 +13,6 @@
     ":semanticCommitTypeAll(chore)",
     "group:allNonMajor"
   ],
-  "prCreation": "not-pending",
   "meteor": {
     "enabled": false
   },
