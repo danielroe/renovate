@@ -27,11 +27,9 @@
       "groupName": "vite dependencies",
       "groupSlug": "vite",
       "matchPackageNames": [
-        "vite"
-      ],
-      "matchPackagePatterns": [
-        "^@vitejs/",
-        "^vite-"
+        "vite",
+        "/^@vitejs//",
+        "/^vite-/"
       ]
     },
     {
@@ -42,16 +40,14 @@
         "c8",
         "happy-dom",
         "jsdom",
-        "vitest"
-      ],
-      "matchPackagePatterns": [
-        "^@vitest/"
+        "/vitest/",
+        "/^@vitest//"
       ],
       "groupName": "test packages"
     },
     {
-      "matchPackagePatterns": [
-        "release-it"
+      "matchPackageNames": [
+        "/release-it/"
       ],
       "groupName": "release-it"
     },
@@ -66,10 +62,8 @@
     },
     {
       "matchPackageNames": [
-        "histoire"
-      ],
-      "matchPackagePatterns": [
-        "^@histoire/"
+        "histoire",
+        "/^@histoire//"
       ],
       "groupName": "histoire"
     },
@@ -117,6 +111,13 @@
         "nuxt",
         "nuxt3",
         "vue"
+      ]
+    },
+    {
+      "groupName": "typescript",
+      "matchPackageNames": [
+        "typescript",
+        "vue-tsc"
       ]
     }
   ]
