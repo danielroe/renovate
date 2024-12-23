@@ -112,13 +112,6 @@
         "nuxt3",
         "vue"
       ]
-    },
-    {
-      "groupName": "typescript",
-      "matchPackageNames": [
-        "typescript",
-        "vue-tsc"
-      ]
     }
   ]
 }
