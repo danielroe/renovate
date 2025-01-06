@@ -16,6 +16,7 @@
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
   },
+  "schedule": ["on Monday"],
   "packageRules": [
     {
       "matchDepTypes": [
@@ -111,7 +112,8 @@
         "nuxt",
         "nuxt3",
         "vue"
-      ]
+      ],
+      "schedule": ["at any time"]
     }
   ]
 }
