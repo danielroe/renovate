@@ -5,9 +5,9 @@
   "license": "MIT",
   "homepage": "https://github.com/danielroe/renovate",
   "scripts": {
-    "validate": "pnpm exec renovate-config-validator",
-    "test": "npm run validate",
-    "prepare": "npm run test"
+    "validate": "renovate-config-validator",
+    "test": "pnpm validate",
+    "prepare": "pnpm test"
   },
   "devDependencies": {
     "renovate": "latest"
