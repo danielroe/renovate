@@ -115,5 +115,8 @@
       ],
       "schedule": ["at any time"]
     }
+  ],
+  "postUpdateOptions": [
+    "pnpmDedupe"
   ]
 }
