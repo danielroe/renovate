@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Stricter config for personal/private repos to conserve CI minutes",
+  "extends": [
+    "github>danielroe/renovate"
+  ],
+  "prConcurrentLimit": 3,
+  "branchConcurrentLimit": 3,
+  "dependencyDashboardAutoclose": true,
+  "minimumReleaseAge": "3 days",
+  "inactiveCloseAutoMerge": true
+}
