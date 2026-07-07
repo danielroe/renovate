@@ -57,7 +57,9 @@
         "packages:linters"
       ],
       "matchPackageNames": [
-        "commitlint"
+        "commitlint",
+        "knip",
+        "publint"
       ],
       "groupName": "all linters"
     },
