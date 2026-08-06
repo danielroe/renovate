@@ -16,6 +16,7 @@
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
   },
+  "minimumReleaseAge": "25 hours",
   "schedule": ["on Monday"],
   "packageRules": [
     {
