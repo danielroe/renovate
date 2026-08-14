@@ -10,7 +10,7 @@
     "prepare": "pnpm test"
   },
   "devDependencies": {
-    "renovate": "^44.11.1"
+    "renovate": "44.11.1"
   },
   "packageManager": "pnpm@11.21.0"
 }
